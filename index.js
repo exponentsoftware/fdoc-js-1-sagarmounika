@@ -59,7 +59,7 @@ const arrOne = [1, 4, 6, 2, 1];
 
 const arrTwo = [1, 4, 6, 2, 3]
 
-true
+
 document.getElementById("app").innerHTML = `
 
 <div>
