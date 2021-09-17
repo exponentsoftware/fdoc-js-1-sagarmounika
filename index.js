@@ -13,8 +13,8 @@ function countWords(str, word1, word2) {
   }
 
   return count1 > count2
-    ? `The word ${word1} more frequently occurred than ${word2}.`
-    : `The word ${word2} more frequently occurred than ${word1}.`
+    ? `The word ${word1} occurred more frequently  than ${word2}.`
+    : `The word ${word2} occurred more frequently  than ${word1}.`
 }
 
 const paragraph =
@@ -51,6 +51,15 @@ function reverseArray(input) {
   return ret
 }
 
+function checkUniqueness(array) {
+	return (new Set(array)).size !== array.length;
+}
+const arrOne = [1, 4, 6, 2, 1];
+
+
+const arrTwo = [1, 4, 6, 2, 3]
+
+true
 document.getElementById("app").innerHTML = `
 
 <div>
@@ -59,6 +68,9 @@ document.getElementById("app").innerHTML = `
 <div> ${countWordsFiltered(sentence)}</div> 
 <div>${sevenRandomNumbers()}</div> 
 <div>${reverseArray(["A", "B", "C"])}</div> 
+<div>${checkUniqueness(arrOne)}</div> 
+<div>${checkUniqueness(arrTwo)}</div> 
+
 
 
 </div>
