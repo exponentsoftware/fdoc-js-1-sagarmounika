@@ -59,4 +59,4 @@ false
 const arrTwo = [1, 4, 6, 2, 3]
 console.log(checkUniqueness(arrTwo));
 true
-`
+
