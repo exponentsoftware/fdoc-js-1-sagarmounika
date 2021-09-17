@@ -36,7 +36,7 @@ const sentence = `I am a teacher and I love teaching. There is nothing as more r
 function sevenRandomNumbers() {
   let arr = []
   while (arr.length < 8) {
-    var r = Math.floor(Math.random() * 9)
+    var r = Math.floor(Math.random() * 10)
     if (arr.indexOf(r) === -1) arr.push(r)
   }
   return arr
