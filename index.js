@@ -32,37 +32,33 @@ function countWordsFiltered(sentence) {
 }
 const sentence = `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
 
-
 function sevenRandomNumbers() {
   let arr = []
   while (arr.length < 8) {
-    var r = Math.floor(Math.random() * 10)
+    let r = Math.floor(Math.random() * 10)
     if (arr.indexOf(r) === -1) arr.push(r)
   }
   return arr
 }
 
-
 function reverseArray(input) {
   var ret = new Array()
-  for (var i = input.length - 1; i >= 0; i--) {
+  for (let i = input.length - 1; i >= 0; i--) {
     ret.push(input[i])
   }
   return ret
 }
 
 function checkUniqueness(array) {
-	return (new Set(array)).size !== array.length;
+  return new Set(array).size !== array.length
 }
-const arrOne = [1, 4, 6, 2, 1];
-
+const arrOne = [1, 4, 6, 2, 1]
 
 const arrTwo = [1, 4, 6, 2, 3]
 
-
 document.getElementById("app").innerHTML = `
 
-<div>
+<div id="parent" >
 
 <div> ${countWords(paragraph, "love", "you")}</div> 
 <div> ${countWordsFiltered(sentence)}</div> 
@@ -73,5 +69,19 @@ document.getElementById("app").innerHTML = `
 
 
 
+
 </div>
 `
+const element = document.getElementById("parent");
+
+const para = document.createElement("div");
+  console.log(element);
+element.appendChild(para);
+for (let i = 1; i < 8; i++) {
+  const node = document.createElement('div');
+  node.appendChild(document.createTextNode('#'.repeat(i)));
+  para.appendChild(node);
+  
+  // console.log(node);
+  
+}
